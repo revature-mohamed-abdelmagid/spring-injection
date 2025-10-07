@@ -10,7 +10,7 @@
     <bean id="emailService" class="com.revature.ioc.EmailService"/>
     <bean id="smsService" class="com.revature.ioc.SmsService"/>
 
-    <bean id="messageSender" class="com.revature.ioc.MessageSender">
+    <bean id="messageSender" class="com.revature.ioc.MessageSender" init-method="initmethod" destroy-method="destroymethod">
         <property name="messageService" ref="emailService"/>
     </bean>
 

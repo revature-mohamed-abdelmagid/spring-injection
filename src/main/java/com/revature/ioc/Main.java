@@ -11,5 +11,6 @@ public class Main {
 
         MessageSender sender = (MessageSender) context.getBean("messageSender");
         sender.processMessage();
+        ((ClassPathXmlApplicationContext) context).close();
     }
 }
